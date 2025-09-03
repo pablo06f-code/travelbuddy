@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f9fafc;
+  color: #333;
+}
+
+/* -------- NAVBAR -------- */
+.navbar {
+  background: linear-gradient(90deg, #ff4e50, #f9d423);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.navbar ul li a:hover {
+  transform: scale(1.1);
+}
+
+/* -------- HERO -------- */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #fff;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+/* -------- BOTONES -------- */
+.btn-primario {
+  background: #ff4e50;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primario:hover {
+  background: #f9d423;
+  transform: scale(1.05);
+}
+
+.btn-secundario {
+  background: #eee;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-secundario:hover {
+  background: #ddd;
+}
+
+/* -------- SECCIONES -------- */
+.seccion {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.seccion h2 {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.map {
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* -------- ANIMACIONES -------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar ul li {
+    margin: 5px 0;
+  }
+
+  .hero {
+    padding: 50px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .map {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5em;
+  }
+
+  .hero p {
+    font-size: 0.9em;
+  }
+
+  .btn-primario {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+

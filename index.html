@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelBuddy Solo Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="firebase-config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="logo">🌍 TravelBuddy</div>
+    <ul>
+      <li><a href="#feed">Feed</a></li>
+      <li><a href="#explorar">Explorar</a></li>
+      <li><a href="#crear">Crear Plan</a></li>
+      <li><a href="#perfil">Perfil</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Viaja solo, pero nunca en soledad ✈️</h1>
+    <p>Encuentra compañeros de viaje, comparte experiencias y descubre el mundo.</p>
+    <button class="btn-primario">Empieza ahora</button>
+  </header>
+
+  <!-- Feed de viajeros -->
+  <section id="feed" class="seccion">
+    <h2>🌟 Planes de otros viajeros</h2>
+    <div id="feed-container" class="grid"></div>
+  </section>
+
+  <!-- Explorar -->
+  <section id="explorar" class="seccion">
+    <h2>🗺️ Explorar destinos</h2>
+    <div id="map" class="map"></div>
+  </section>
+
+  <!-- Crear Plan -->
+  <section id="crear" class="seccion">
+    <h2>📝 Crea tu próximo viaje</h2>
+    <form id="plan-form">
+      <input type="text" placeholder="Destino" required>
+      <input type="date" required>
+      <select>
+        <option value="solo">Viajo solo</option>
+        <option value="compañia">Busco compañía</option>
+      </select>
+      <textarea placeholder="Descripción del plan"></textarea>
+      <button type="submit" class="btn-primario">Publicar plan</button>
+    </form>
+  </section>
+
+  <!-- Perfil -->
+  <section id="perfil" class="seccion">
+    <h2>👤 Mi perfil</h2>
+    <div id="perfil-container">
+      <p>Usuario conectado: <span id="user-email"></span></p>
+      <button id="logout" class="btn-secundario">Cerrar sesión</button>
+    </div>
+  </section>
+
+</body>
+</html>
