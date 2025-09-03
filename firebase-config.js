@@ -1,6 +1,6 @@
 // Configuración Firebase versión compat (v8) lista para usar
 const firebaseConfig = {
-    apiKey: "AIzaSyAFMclK8oLnNN128gZKkk5ahrLjwP1RQx8",
+
     authDomain: "travelbuddy-d4caf.firebaseapp.com",
     projectId: "travelbuddy-d4caf",
     storageBucket: "travelbuddy-d4caf.appspot.com",
@@ -16,4 +16,5 @@ const firebaseConfig = {
   const auth = firebase.auth();
   const db = firebase.database();
   const storage = firebase.storage();
+
   
